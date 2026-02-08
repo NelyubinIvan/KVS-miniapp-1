@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Контакты — КВС-ИНЖИНИРИНГ-ТУЛС</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/contacts.css">
+</head>
+<body>
+
+<!-- Стрелка назад слева сверху -->
+<button class="back-arrow-btn" onclick="window.location.href='index.html'">
+    ←
+</button>
+
+<div class="contacts-container">
+    <h1>Контакты</h1>
+
+    <p class="intro">
+        Свяжитесь с нами для консультации или заказа. Наша команда готова ответить на ваши вопросы и предложить оптимальные решения для вашего производства.
+    </p>
+
+    <div class="contact-grid">
+        <!-- Адрес -->
+        <div class="contact-card">
+            <span class="emoji">📍</span>
+            <h3>Адрес</h3>
+            <p>г. Омск, Улица Рокоссовского, 11, 3 этаж</p>
+        </div>
+
+        <!-- Время работы -->
+        <div class="contact-card">
+            <span class="emoji">🕒</span>
+            <h3>Время работы</h3>
+            <p>ПН—ПТ: 8:00—18:00</p>
+            <p>Сб, Вс: выходной</p>
+        </div>
+
+        <!-- Телефон -->
+        <div class="contact-card">
+            <span class="emoji">📞</span>
+            <h3>Телефон</h3>
+            <a href="tel:+79040732122">+7 (904) 073-21-22</a>
+        </div>
+
+        <!-- Email -->
+        <div class="contact-card">
+            <span class="emoji">📧</span>
+            <h3>Email</h3>
+            <a href="mailto:89040732122@mail.ru">89040732122@mail.ru</a>
+        </div>
+    </div>
+
+    <!-- Карта -->
+    <div class="contact-map">
+        <iframe
+                src="https://yandex.ru/map-widget/v1/?um=constructor%3Ayour_map_id&lang=ru_RU&scroll=true"
+                width="100%"
+                height="400"
+                frameborder="0"
+                allowfullscreen="true">
+        </iframe>
+        <p class="map-note">
+            <a href="https://yandex.ru/maps/org/kvs_inzhiniring_tuls/адрес" target="_blank">
+                Омск, Улица Рокоссовского, 11 — Яндекс Карты
+            </a>
+        </p>
+    </div>
+
+    <!-- Кнопка Назад внизу -->
+    <button class="back-main-btn" onclick="window.location.href='index.html'">
+        Назад на главную
+    </button>
+</div>
+
+</body>
+</html>

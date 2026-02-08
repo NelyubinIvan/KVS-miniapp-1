@@ -1,0 +1,136 @@
+
+/* Основной контейнер */
+.contacts-container {
+    padding: 80px 1.5rem 4rem;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.contacts-container h1 {
+    text-align: center;
+    margin-bottom: 1rem;
+    font-size: 1.9rem;
+    color: var(--text);
+    font-weight: 700;
+}
+
+.intro {
+    text-align: center;
+    color: var(--gray);
+    font-size: 1.05rem;
+    line-height: 1.5;
+    margin-bottom: 2.5rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Сетка контактов */
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+.contact-card {
+    background: rgba(30, 30, 50, 0.75);
+    border: 1px solid #333355;
+    border-radius: 16px;
+    padding: 1.8rem;
+    text-align: center;
+    transition: all 0.25s ease;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+.contact-card:hover {
+    transform: translateY(-6px);
+    border-color: var(--yellow);
+    box-shadow: 0 10px 30px rgba(245, 197, 24, 0.2);
+}
+
+.contact-card .emoji {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.contact-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 0.8rem;
+    color: var(--yellow);
+}
+
+.contact-card p,
+.contact-card a {
+    font-size: 1.05rem;
+    color: var(--text);
+    line-height: 1.5;
+}
+
+.contact-card a {
+    color: var(--yellow);
+    font-weight: 500;
+}
+
+.contact-card a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+/* Карта */
+.contact-map {
+    margin-bottom: 3rem;
+}
+
+.contact-map iframe {
+    border-radius: 16px;
+    border: none;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+}
+
+.map-note {
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 1rem;
+    color: var(--gray);
+}
+
+.map-note a {
+    color: var(--yellow);
+}
+
+/* Кнопка назад внизу */
+.back-main-btn {
+    display: block;
+    width: 100%;
+    max-width: 420px;
+    margin: 4rem auto 3rem;
+    padding: 1.3rem 2rem;
+    background: linear-gradient(145deg, #333355, #222244);
+    color: white;
+    border: none;
+    border-radius: 999px;
+    font-size: 1.25rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.45);
+}
+
+.back-main-btn:hover {
+    background: linear-gradient(145deg, #444466, #333355);
+    transform: translateY(-4px);
+    box-shadow: 0 10px 30px rgba(245, 197, 24, 0.28);
+}
+
+/* Адаптив */
+@media (max-width: 720px) {
+    .contacts-container {
+        padding: 80px 1rem 4rem;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,0 +1,104 @@
+/* producers.css */
+
+body {
+    padding-top: 70px; /* или 80px — подбери под высоту кнопки + отступы */
+}
+
+/* Основной контейнер с отступом сверху (чтобы контент не налезал на стрелку) */
+.producers-container {
+    padding: 80px 1.5rem 2rem;  /* 80px сверху — под стрелку */
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.producers-container h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 1.8rem;
+    color: var(--text);
+}
+
+/* Карточка бренда */
+.producer-card {
+    background: rgba(30, 30, 50, 0.7);
+    border: 1px solid #333355;
+    border-radius: 16px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    transition: all 0.22s ease;
+}
+
+.producer-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--yellow);
+    box-shadow: 0 8px 25px rgba(245, 197, 24, 0.2);
+}
+
+.producer-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.producer-logo {
+    width: 120px;
+    height: auto;
+    object-fit: contain;
+    border-radius: 8px;
+    background: #111122;
+    padding: 0.5rem;
+}
+
+.producer-name {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--yellow);
+}
+
+.producer-desc {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: var(--text);
+    margin-bottom: 1rem;
+}
+
+.producer-link {
+    display: inline-block;
+    color: var(--yellow);
+    font-weight: 600;
+    text-decoration: none;
+    padding: 0.6rem 1.2rem;
+    border: 1px solid var(--yellow);
+    border-radius: 999px;
+    transition: all 0.22s ease;
+}
+
+.producer-link:hover {
+    background: var(--yellow);
+    color: #111;
+}
+
+/* Большая кнопка Назад внизу страницы */
+.back-main-btn {
+    display: block;
+    width: 100%;
+    max-width: 400px;
+    margin: 3rem auto 2rem;
+    padding: 1.2rem;
+    background: linear-gradient(145deg, #333355, #222244);
+    color: white;
+    border: none;
+    border-radius: 999px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.22s ease;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+}
+
+.back-main-btn:hover {
+    background: linear-gradient(145deg, #444466, #333355);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(245, 197, 24, 0.25);
+}

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Оставить заявку — КВС-ИНЖИНИРИНГ-ТУЛС</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/request.css">
+    <style>
+        /* Дополнительные стили только для этой страницы (можно вынести в css/request.css позже) */
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .request-page {
+            flex: 1;
+            padding: 80px 1.5rem 4rem; /* отступ под стрелку назад */
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .request-page h1 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            color: var(--text);
+        }
+
+        .form-intro {
+            color: var(--gray);
+            font-size: 1.1rem;
+            margin-bottom: 2.5rem;
+            line-height: 1.6;
+        }
+
+        .form-container {
+            display: flex;
+            flex-direction: column;
+            gap: 1.3rem;
+            background: rgba(30, 30, 50, 0.8);
+            padding: 2rem;
+            border-radius: 16px;
+            border: 1px solid #333355;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.5);
+        }
+
+        .form-container input,
+        .form-container textarea {
+            padding: 1.1rem;
+            border: 1px solid #444466;
+            border-radius: 12px;
+            background: #1a1a2e;
+            color: white;
+            font-size: 1rem;
+        }
+
+        .form-container input::placeholder,
+        .form-container textarea::placeholder {
+            color: var(--gray);
+        }
+
+        .form-container textarea {
+            resize: vertical;
+            min-height: 140px;
+        }
+
+        .form-container button {
+            padding: 1.2rem;
+            background: linear-gradient(145deg, var(--yellow), var(--yellow-dark));
+            color: #111;
+            border: none;
+            border-radius: 999px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.25s ease;
+            box-shadow: 0 8px 25px rgba(245, 197, 24, 0.4);
+        }
+
+        .form-container button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 35px rgba(245, 197, 24, 0.55);
+        }
+
+        /* Адаптив */
+        @media (max-width: 480px) {
+            .request-page {
+                padding: 80px 1rem 4rem;
+            }
+
+            .request-page h1 {
+                font-size: 1.7rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- Стрелка назад слева сверху -->
+<button class="back-arrow-btn" onclick="window.location.href='index.html'">
+    ←
+</button>
+
+<div class="request-page">
+    <h1>Оставить заявку</h1>
+
+    <p class="form-intro">
+        Расскажите о вашей задаче — подберём инструмент, оснастку или технологию.
+        Мы свяжемся с вами в ближайшее время.
+    </p>
+
+    <form action="https://api.web3forms.com/submit" method="POST" class="form-container">
+        <!-- Ключ web3forms (замени на свой реальный!) -->
+        <input type="hidden" name="access_key" value="7c05c9b8-eb24-4810-ae9e-da1d06708306">
+
+        <!-- После отправки — переход на spasibo.html -->
+        <input type="hidden" name="redirect" value="spasibo.html">
+
+        <input type="text" name="name" placeholder="Ваше имя" required>
+        <input type="tel" name="phone" placeholder="Телефон *" required>
+        <input type="email" name="email" placeholder="Email (не обязательно)">
+        <textarea name="message" placeholder="Что вас интересует? (тип инструмента, бренд, чертеж, задача и т.д.)" rows="6" required></textarea>
+
+        <button type="submit">Отправить заявку</button>
+    </form>
+</div>
+
+<!-- Большая кнопка Назад внизу (опционально, если хочешь) -->
+<button class="back-main-btn" onclick="window.location.href='index.html'">
+    Назад на главную
+</button>
+
+</body>
+</html>
